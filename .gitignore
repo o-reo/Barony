@@ -1,0 +1,12 @@
+data/
+books/
+maps/
+models/
+sound/
+music/
+images/
+items/
+CMakeFiles/
+Makefile
+CMakeCache.txt
+cmake_install.cmake

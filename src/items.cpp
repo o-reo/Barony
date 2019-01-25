@@ -1792,6 +1792,9 @@ void useItem(Item* item, int player)
 		case POTION_PARALYSIS:
 			item_PotionParalysis(item, players[player]->entity);
 			break;
+		case TRANSFORM_SLIME:
+			item_TransformSlime(item, players[player]->entity);
+			break;
 		case POTION_EMPTY:
 			messagePlayer(player, language[2359]);
 			break;

@@ -1451,6 +1451,23 @@ void initClass(int player)
 			free(item);
 		}
 	}
+	// beggar - mod
+	else if (client_classes[player] == 13) {
+
+	}
+	// slime - mod
+	else if (client_classes[player] == 14) {
+		// slime transform item
+		item = newItem(TRANSFORM_SLIME, SERVICABLE, 0, 1, 0, true, NULL);
+		if ( player == clientnum )
+		{
+			item2 = itemPickup(player, item);
+			useItem(item2, player);
+			free(item);
+		}
+		// Change sprite to green slime
+		//players[player]->entity->sprite = 210;
+	}
 
 	// move default items to the right
 	if ( player == clientnum )

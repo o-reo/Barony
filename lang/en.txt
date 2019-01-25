@@ -3179,8 +3179,8 @@ last of your magic is drained!#
 2550 sexton#
 2551 ninja#
 2552 monk#
-2553 blank#
-2554 blank#
+2553 beggar#
+2554 blob#
 2555 blank#
 2556 blank#
 2557 blank#
@@ -3196,9 +3196,9 @@ Difficulty: Hard#
 2562 Disciplined and hardy. They have little in the way of offensive training and
 material goods, but can rely on their excellent fortitude and adaptability.
 Difficulty: Normal#
-2563 A blank.
+2563 Born with nothing in his pocket, hoping to find a purpose.
 Difficulty: Normal#
-2564 A blank.
+2564 Yeah, you are a blob.
 Difficulty: Normal#
 2565 A blank.
 Difficulty: Normal#

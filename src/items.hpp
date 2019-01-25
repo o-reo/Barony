@@ -90,6 +90,7 @@ typedef enum ItemType
 	POTION_SPEED,
 	POTION_ACID,
 	POTION_PARALYSIS,
+	TRANSFORM_SLIME,
 	SCROLL_MAIL,
 	SCROLL_IDENTIFY,
 	SCROLL_LIGHT,
@@ -402,6 +403,7 @@ void item_PotionLevitation(Item*& item, Entity* entity);
 void item_PotionSpeed(Item*& item, Entity* entity);
 void item_PotionAcid(Item*& item, Entity* entity);
 void item_PotionParalysis(Item*& item, Entity* entity);
+void item_TransformSlime(Item*& item, Entity* entity);
 void item_ScrollMail(Item* item, int player);
 void item_ScrollIdentify(Item* item, int player);
 void item_ScrollLight(Item* item, int player);

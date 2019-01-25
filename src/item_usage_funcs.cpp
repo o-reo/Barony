@@ -885,6 +885,38 @@ void item_PotionParalysis(Item*& item, Entity* entity)
 	consumeItem(item);
 }
 
+void item_TransformSlime(Item*& item, Entity* entity)
+{
+	if (!entity)
+	{
+		return;
+	}
+
+	int player = -1;
+	Stat* stats;
+
+	if ( entity->behavior == &actPlayer )
+	{
+		player = entity->skill[2];
+	}
+	stats = entity->getStats();
+	if ( !stats )
+	{
+		return;
+	}
+	if ( multiplayer == CLIENT )
+	{
+		consumeItem(item);
+		return;
+	}
+	entity->setEffect(EFF_TRANSFORM_SLIME, true, 999999999999999, false);
+	serverUpdateEffects(player);
+
+	// play drink sound
+	playSoundEntity(entity, 52, 64);
+	consumeItem(item);
+}
+
 void item_PotionHealing(Item*& item, Entity* entity, bool shouldConsumeItem)
 {
 	if (!entity)

@@ -1070,7 +1070,7 @@ void actPlayer(Entity* my)
 		my->effectTimes();
 	}
 
-	// invisibility
+	// Invisibility
 	if ( !intro )
 	{
 		if ( PLAYER_NUM == clientnum || multiplayer == SERVER )
@@ -1168,7 +1168,21 @@ void actPlayer(Entity* my)
 		{
 			my->z = -1;
 		}
-
+		
+		// TRANSFORMED
+		//if (!intro) {
+		// as a green slime
+			if ( stats[PLAYER_NUM]->EFFECTS[EFF_TRANSFORM_SLIME] )
+			{
+				my->z = 1.5;
+				for(int bp = 0; bp < 9; bp++)
+					my->bodyparts[bp]->flags[INVISIBLE] = true;
+			}
+			else if ( !noclip )
+			{
+				my->z = -1;
+			}
+		//}
 		// levitation
 		levitating = isLevitating(stats[PLAYER_NUM]);
 
